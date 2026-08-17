@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hue&You AI</title>
+<style>
+  :root {
+    --plum: #2c1929; --rose: #c47484; --ink: #f4eef2; --muted: #c9b8c4;
+    --card: rgba(255,255,255,.06);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(120% 120% at 20% 0%, #46223f 0%, var(--plum) 55%, #180e17 100%);
+    color: var(--ink); min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 32px 20px;
+  }
+  main { max-width: 640px; width: 100%; text-align: center; }
+  .halo {
+    width: 128px; height: 128px; margin: 0 auto 24px; border-radius: 50%;
+    background: conic-gradient(from 270deg, #e8654f, #f2c14e, #7cb65b, #3fb8af, #7b93d6, #a48fc0, #c2308f, #c1122f, #e8654f);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .halo .inner {
+    width: 96px; height: 96px; border-radius: 50%; background: var(--plum);
+    display: flex; align-items: center; justify-content: center; font-size: 44px;
+  }
+  h1 { font-size: 2.2rem; letter-spacing: -.02em; margin-bottom: 8px; }
+  .tagline { color: var(--muted); font-size: 1.05rem; line-height: 1.5; margin-bottom: 8px; }
+  .motto { color: var(--rose); font-style: italic; margin-bottom: 32px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 32px; }
+  @media (max-width: 480px) { .cards { grid-template-columns: 1fr; } }
+  a.card {
+    display: block; background: var(--card); border: 1px solid rgba(255,255,255,.12);
+    border-radius: 16px; padding: 20px 16px; text-decoration: none; color: var(--ink);
+    transition: background .15s ease;
+  }
+  a.card:hover { background: rgba(255,255,255,.11); }
+  a.card .emoji { font-size: 26px; display: block; margin-bottom: 8px; }
+  a.card .title { font-weight: 600; margin-bottom: 4px; }
+  a.card .sub { color: var(--muted); font-size: .85rem; }
+  .privacy-line { color: var(--muted); font-size: .85rem; line-height: 1.5; }
+  footer { margin-top: 28px; color: rgba(255,255,255,.35); font-size: .78rem; }
+</style>
+</head>
+<body>
+<main>
+  <div class="halo"><div class="inner">👤</div></div>
+  <h1>Hue&amp;You AI</h1>
+  <p class="tagline">Farebná typológia z jednej fotky — odtiene vlasov, líčenie a farby šatníka, podložené meraním.<br>
+  Colour analysis from a single photo — hair shades, makeup and wardrobe colours, grounded in measurement.</p>
+  <p class="motto">„Nemeň, kým si — vyzdvihujeme a zvýrazňujeme, kto si.“</p>
+
+  <div class="cards">
+    <a class="card" href="privacy.html">
+      <span class="emoji">🔒</span>
+      <span class="title">Zásady ochrany súkromia</span>
+      <span class="sub">Privacy Policy</span>
+    </a>
+    <a class="card" href="support.html">
+      <span class="emoji">💬</span>
+      <span class="title">Podpora</span>
+      <span class="sub">Support</span>
+    </a>
+  </div>
+
+  <p class="privacy-line">Všetky analýzy bežia priamo v telefóne. Fotky nikam neodchádzajú.<br>
+  All analysis runs on-device. Photos never leave your iPhone.</p>
+
+  <footer>© 2026 Ján Sikuta · Hue&amp;You AI</footer>
+</main>
+</body>
+</html>
