@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hue&You AI — Zásady ochrany súkromia</title>
+<title>Hue&You AI — Privacy Policy / Zásady ochrany súkromia</title>
 <style>
   :root { --plum: #2c1929; --rose: #c47484; --ink: #f4eef2; --muted: #c9b8c4; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -13,46 +13,114 @@
     color: var(--ink); min-height: 100vh; padding: 40px 20px;
   }
   main { max-width: 680px; margin: 0 auto; }
-  a.back { color: var(--rose); text-decoration: none; font-size: .9rem; }
+  a { color: var(--rose); }
+  a.back { text-decoration: none; font-size: .9rem; }
   h1 { font-size: 1.7rem; margin: 16px 0 6px; }
   .updated { color: var(--muted); font-size: .82rem; margin-bottom: 28px; }
   h2 { font-size: 1.05rem; color: var(--rose); margin: 26px 0 8px; }
-  p, li { color: var(--ink); line-height: 1.65; font-size: .95rem; }
+  p, li { color: var(--ink); line-height: 1.65; font-size: .95rem; margin-bottom: 8px; }
   ul { padding-left: 22px; }
+  .box {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14);
+    border-radius: 12px; padding: 16px 18px; margin: 10px 0 14px;
+  }
   .en { color: var(--muted); }
   hr { border: none; border-top: 1px solid rgba(255,255,255,.14); margin: 34px 0; }
   footer { margin-top: 36px; color: rgba(255,255,255,.35); font-size: .78rem; text-align: center; }
+  nav.toc { font-size: .88rem; margin-bottom: 20px; }
+  nav.toc a { margin-right: 12px; }
 </style>
 </head>
 <body>
 <main>
   <a class="back" href="index.html">← Hue&amp;You AI</a>
-  <h1>Zásady ochrany súkromia</h1>
-  <p class="updated">Posledná aktualizácia: 17. augusta 2026</p>
+  <h1 id="privacy-policy">Privacy Policy</h1>
+  <p class="updated">Last updated: 3 September 2026 · Applies to Hue&amp;You AI for iOS, version 1.1 and later</p>
 
-  <h2>Žiadny zber údajov</h2>
-  <p>Hue&amp;You AI nezbiera, neukladá ani neodosiela žiadne osobné údaje. Aplikácia nemá používateľské kontá, nepoužíva analytické ani reklamné nástroje a nekomunikuje so žiadnym serverom prevádzkovateľa.</p>
+  <nav class="toc">
+    <a href="#summary">1. Summary</a>
+    <a href="#face-data">2. Face data</a>
+    <a href="#photos">3. Photos</a>
+    <a href="#ai">4. Apple Intelligence</a>
+    <a href="#sharing">5. Sharing</a>
+    <a href="#retention">6. Retention</a>
+    <a href="#contact">8. Contact</a>
+  </nav>
 
-  <h2>Fotografie</h2>
-  <p>Fotografie, ktoré aplikácii poskytneš (z knižnice alebo z fotoaparátu), sa spracúvajú výlučne v tvojom zariadení pomocou technológií Apple Vision a Apple Intelligence (on-device). Nikdy sa nenahrávajú na žiadny server. Voliteľné uloženie selfie prebieha len na tvoj výslovný pokyn a len do tvojej vlastnej knižnice fotiek.</p>
+  <h2 id="summary">1. Summary</h2>
+  <p>Hue&amp;You AI does not collect, store, transmit or share any personal data. The app has no user accounts, no analytics, no advertising tools and makes <strong>no network requests</strong> of any kind. Everything the app does — including face detection, colour measurement and the optional AI summary — happens entirely on your iPhone.</p>
 
-  <h2>AI zhrnutie</h2>
-  <p>Osobné zhrnutie generuje model Apple Intelligence priamo v zariadení. Namerané údaje ani vygenerovaný text zariadenie neopúšťajú.</p>
+  <h2 id="face-data">2. Face data</h2>
+  <div class="box">
+    <p><strong>What face data is processed.</strong> When you choose a photo or take a selfie, Apple's Vision framework detects the face in the image on your device and returns the face outline and landmark points (eye, lip and jaw contours) together with a person silhouette mask. The app then samples pixel colours from the skin, hair and irises in that photo and converts them into colour measurements (CIELAB values, ITA° skin depth, hue angle, skin–hair contrast, eye colour class, face-shape estimate).</p>
+    <p><strong>How it is used.</strong> This face data is used for one purpose only: to derive your colour recommendations (hair shades, makeup and wardrobe palettes) and to render the optional “try on your photo” preview on your own picture. It is not used for identification, authentication, advertising, profiling or any other purpose.</p>
+    <p><strong>Where it is stored.</strong> Face data exists only in the app's working memory (RAM) on your iPhone for the duration of the current analysis. The app never writes face data, landmarks, masks or measurements to disk, to iCloud, to a database or to any server.</p>
+    <p><strong>How long it is retained.</strong> Not beyond the active session. Face data is discarded automatically when you start a new analysis, when you close the app, or when iOS terminates the app in the background.</p>
+    <p><strong>Deletion.</strong> Automatic and immediate — see above. There is nothing for you to delete and nothing for us to delete, because no copy exists outside your device's memory.</p>
+    <p><strong>Sharing.</strong> Face data is never shared with any third party, never transmitted to any server and never passed to any cloud or third-party AI service. We (the developer) never receive it.</p>
+    <p><strong>No biometric identification.</strong> The app does not create a face template, faceprint or any other biometric identifier, and it does not perform face recognition. It cannot tell who is in the photo.</p>
+  </div>
 
-  <h2>Kontakt</h2>
-  <p>Otázky k súkromiu: <a style="color:var(--rose)" href="mailto:jansikuta@me.com">jansikuta@me.com</a></p>
+  <h2 id="photos">3. Photos</h2>
+  <p>Photos you provide (from your photo library or the in-app camera) are processed exclusively on your device. They are never uploaded anywhere. The app requests <em>add-only</em> access to your photo library; it cannot read your existing photos beyond the one you explicitly pick.</p>
+  <p>If you choose <strong>Save</strong> after taking a selfie or in the try-on screen, iOS writes that image into your own photo library on your device, under your control. The app keeps no copy.</p>
+
+  <h2 id="ai">4. Apple Intelligence (“AI stylist”)</h2>
+  <p>The “AI stylist” feature uses Apple's on-device <em>Foundation Models</em> framework (Apple Intelligence). It is available only on devices where Apple Intelligence is supported and enabled, and it runs entirely on your iPhone.</p>
+  <p>Only numeric, non-identifying measurements are passed to the on-device model — undertone, ITA° skin depth, hair level, skin–hair contrast, seasonal colour type, eye colour class and the names of recommended shades. <strong>No photo and no face data is ever passed to the model.</strong></p>
+  <p><strong>The app does not use any third-party AI service.</strong> No data is sent to OpenAI, Google, Anthropic, Microsoft or any other cloud model or provider. The app makes no network requests at all.</p>
+
+  <h2 id="sharing">5. Sharing with third parties</h2>
+  <p>None. The app shares no data with anyone. There are no third-party SDKs, no analytics, no advertising, no crash-reporting services and no servers operated by us.</p>
+
+  <h2 id="retention">6. Retention</h2>
+  <p>The only information the app persists is your interface language preference (stored locally in the app's own settings on your device). Face data, photos, measurements and generated summaries are not persisted by the app — see section 2.</p>
+
+  <h2 id="children">7. Children</h2>
+  <p>The app is not directed at children and collects no data from anyone.</p>
+
+  <h2 id="contact">8. Contact</h2>
+  <p>Privacy questions: <a href="mailto:jansikuta@me.com">jansikuta@me.com</a>. Changes to this policy will be published on this page with an updated date.</p>
 
   <hr>
 
-  <h1 class="en">Privacy Policy</h1>
-  <h2>No data collection</h2>
-  <p class="en">Hue&amp;You AI does not collect, store or transmit any personal data. The app has no user accounts, no analytics, no advertising tools and communicates with no server operated by us.</p>
-  <h2>Photos</h2>
-  <p class="en">Photos you provide (from your library or camera) are processed exclusively on your device using Apple Vision and on-device Apple Intelligence. They are never uploaded anywhere. Optionally saving a selfie happens only at your explicit request, into your own photo library.</p>
-  <h2>AI summary</h2>
-  <p class="en">The personal summary is generated by Apple Intelligence on-device. Neither the measurements nor the generated text ever leave your iPhone.</p>
-  <h2>Contact</h2>
-  <p class="en">Privacy questions: <a style="color:var(--rose)" href="mailto:jansikuta@me.com">jansikuta@me.com</a></p>
+  <h1 id="zasady">Zásady ochrany súkromia</h1>
+  <p class="updated">Posledná aktualizácia: 3. septembra 2026 · Platí pre Hue&amp;You AI pre iOS od verzie 1.1</p>
+
+  <h2>1. Zhrnutie</h2>
+  <p>Hue&amp;You AI nezbiera, neukladá, neodosiela ani nezdieľa žiadne osobné údaje. Aplikácia nemá používateľské kontá, nepoužíva analytické ani reklamné nástroje a <strong>nevykonáva žiadnu sieťovú komunikáciu</strong>. Všetko — vrátane detekcie tváre, merania farieb aj voliteľného AI zhrnutia — prebieha výlučne v tvojom iPhone.</p>
+
+  <h2 id="udaje-tvare">2. Údaje tváre</h2>
+  <div class="box">
+    <p><strong>Aké údaje tváre sa spracúvajú.</strong> Keď vyberieš fotku alebo odfotíš selfie, Apple Vision v zariadení nájde tvár a vráti jej obrys a orientačné body (kontúry očí, pier a čeľuste) spolu s maskou siluety osoby. Aplikácia potom z fotky navzorkuje farby pixelov pleti, vlasov a dúhoviek a prevedie ich na farebné merania (hodnoty CIELAB, hĺbka pleti ITA°, uhol odtieňa, kontrast pleť–vlasy, trieda farby očí, odhad tvaru tváre).</p>
+    <p><strong>Na čo sa používajú.</strong> Výlučne na odvodenie tvojich farebných odporúčaní (odtiene vlasov, palety líčenia a šatníka) a na vykreslenie voliteľného náhľadu „vyskúšať na fotke“ na tvojej vlastnej fotke. Nepoužívajú sa na identifikáciu, overovanie, reklamu, profilovanie ani na nič iné.</p>
+    <p><strong>Kde sú uložené.</strong> Len v pracovnej pamäti (RAM) aplikácie v tvojom iPhone počas prebiehajúcej analýzy. Aplikácia údaje tváre, orientačné body, masky ani merania nikdy nezapisuje na disk, do iCloudu, do databázy ani na žiadny server.</p>
+    <p><strong>Ako dlho sa uchovávajú.</strong> Nie dlhšie než trvá aktívna relácia. Zahodia sa automaticky, keď spustíš novú analýzu, zavrieš aplikáciu alebo ju iOS ukončí na pozadí.</p>
+    <p><strong>Vymazanie.</strong> Automatické a okamžité — pozri vyššie. Nie je čo mazať, lebo mimo pamäte tvojho zariadenia žiadna kópia neexistuje.</p>
+    <p><strong>Zdieľanie.</strong> Údaje tváre sa nikdy nezdieľajú so žiadnou treťou stranou, neodosielajú na žiadny server a neodovzdávajú žiadnej cloudovej ani cudzej AI službe. My (vývojár) ich nikdy nedostaneme.</p>
+    <p><strong>Žiadna biometrická identifikácia.</strong> Aplikácia nevytvára šablónu tváre ani iný biometrický identifikátor a nerozpoznáva osoby. Nevie, kto je na fotke.</p>
+  </div>
+
+  <h2>3. Fotografie</h2>
+  <p>Fotky, ktoré aplikácii poskytneš (z knižnice alebo z fotoaparátu v appke), sa spracúvajú výlučne v zariadení. Nikdy sa nikam nenahrávajú. Aplikácia žiada len prístup <em>na pridávanie</em> do knižnice fotiek; tvoje ostatné fotky okrem tej, ktorú sám vyberieš, čítať nemôže.</p>
+  <p>Ak po selfie alebo v náhľade ťukneš na <strong>Uložiť</strong>, iOS zapíše obrázok do tvojej vlastnej knižnice fotiek v zariadení, pod tvojou kontrolou. Aplikácia si kópiu nenecháva.</p>
+
+  <h2>4. Apple Intelligence („AI stylista“)</h2>
+  <p>Funkcia „AI stylista“ používa Apple <em>Foundation Models</em> (Apple Intelligence) priamo v zariadení. Dostupná je len tam, kde je Apple Intelligence podporovaná a zapnutá, a beží výlučne v tvojom iPhone.</p>
+  <p>Modelu sa odovzdávajú len číselné, neidentifikujúce merania — podtón, ITA°, úroveň vlasov, kontrast, sezónny typ, trieda farby očí a názvy odporúčaných odtieňov. <strong>Fotka ani údaje tváre sa modelu nikdy neodovzdávajú.</strong></p>
+  <p><strong>Aplikácia nepoužíva žiadnu cudziu AI službu.</strong> Nič sa neposiela do OpenAI, Google, Anthropic, Microsoft ani inému cloudovému modelu či poskytovateľovi. Aplikácia nevykonáva žiadne sieťové požiadavky.</p>
+
+  <h2>5. Zdieľanie s tretími stranami</h2>
+  <p>Žiadne. Aplikácia nezdieľa údaje s nikým. Neobsahuje cudzie SDK, analytiku, reklamu, hlásenie pádov ani servery, ktoré by sme prevádzkovali.</p>
+
+  <h2>6. Uchovávanie</h2>
+  <p>Jediné, čo si aplikácia pamätá, je zvolený jazyk rozhrania (lokálne, v jej vlastných nastaveniach v zariadení). Údaje tváre, fotky, merania ani vygenerované zhrnutia aplikácia neuchováva — pozri časť 2.</p>
+
+  <h2>7. Deti</h2>
+  <p>Aplikácia nie je určená deťom a nezbiera údaje od nikoho.</p>
+
+  <h2>8. Kontakt</h2>
+  <p>Otázky k súkromiu: <a href="mailto:jansikuta@me.com">jansikuta@me.com</a>. Zmeny týchto zásad zverejníme na tejto stránke s novým dátumom.</p>
 
   <footer>© 2026 Ján Sikuta · Hue&amp;You AI</footer>
 </main>
