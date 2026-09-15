@@ -35,7 +35,7 @@
 <main>
   <a class="back" href="index.html">← Hue&amp;You AI</a>
   <h1 id="privacy-policy">Privacy Policy</h1>
-  <p class="updated">Last updated: 3 September 2026 · Applies to Hue&amp;You AI for iOS, version 1.1 and later</p>
+  <p class="updated">Last updated: 15 September 2026 · Applies to Hue&amp;You AI for iOS, version 1.1 and later</p>
 
   <nav class="toc">
     <a href="#summary">1. Summary</a>
@@ -52,7 +52,7 @@
 
   <h2 id="face-data">2. Face data</h2>
   <div class="box">
-    <p><strong>What face data is processed.</strong> When you choose a photo or take a selfie, Apple's Vision framework detects the face in the image on your device and returns the face outline and landmark points (eye, lip and jaw contours) together with a person silhouette mask. The app then samples pixel colours from the skin, hair and irises in that photo and converts them into colour measurements (CIELAB values, ITA° skin depth, hue angle, skin–hair contrast, eye colour class, face-shape estimate).</p>
+    <p><strong>What face data is processed.</strong> When you choose a photo or take a selfie, on-device models detect the face and its parts: Apple's Vision framework (face outline, landmarks, person mask) and two MediaPipe models by Google bundled inside the app (a hair / skin / clothing segmentation model and a facial-landmark model that locates the iris). All of them run on your iPhone's own processor. The app then samples pixel colours from the skin, hair and irises in that photo and converts them into colour measurements (CIELAB values, ITA° skin depth, hue angle, skin–hair contrast, eye colour class, face-shape estimate).</p>
     <p><strong>How it is used.</strong> This face data is used for one purpose only: to derive your colour recommendations (hair shades, makeup and wardrobe palettes) and to render the optional “try on your photo” preview on your own picture. It is not used for identification, authentication, advertising, profiling or any other purpose.</p>
     <p><strong>Where it is stored.</strong> Face data exists only in the app's working memory (RAM) on your iPhone for the duration of the current analysis. The app never writes face data, landmarks, masks or measurements to disk, to iCloud, to a database or to any server.</p>
     <p><strong>How long it is retained.</strong> Not beyond the active session. Face data is discarded automatically when you start a new analysis, when you close the app, or when iOS terminates the app in the background.</p>
@@ -68,7 +68,7 @@
   <h2 id="ai">4. Apple Intelligence (“AI stylist”)</h2>
   <p>The “AI stylist” feature uses Apple's on-device <em>Foundation Models</em> framework (Apple Intelligence). It is available only on devices where Apple Intelligence is supported and enabled, and it runs entirely on your iPhone.</p>
   <p>Only numeric, non-identifying measurements are passed to the on-device model — undertone, ITA° skin depth, hair level, skin–hair contrast, seasonal colour type, eye colour class and the names of recommended shades. <strong>No photo and no face data is ever passed to the model.</strong></p>
-  <p><strong>The app does not use any third-party AI service.</strong> No data is sent to OpenAI, Google, Anthropic, Microsoft or any other cloud model or provider. The app makes no network requests at all.</p>
+  <p><strong>The app does not use any third-party AI service.</strong> No data is sent to OpenAI, Google, Anthropic, Microsoft or any other cloud model or provider. The MediaPipe models mentioned above are offline software components shipped inside the app (Apache License 2.0), not a service — they never communicate with Google or anyone else. The app makes no network requests at all.</p>
 
   <h2 id="sharing">5. Sharing with third parties</h2>
   <p>None. The app shares no data with anyone. There are no third-party SDKs, no analytics, no advertising, no crash-reporting services and no servers operated by us.</p>
@@ -85,14 +85,14 @@
   <hr>
 
   <h1 id="zasady">Zásady ochrany súkromia</h1>
-  <p class="updated">Posledná aktualizácia: 3. septembra 2026 · Platí pre Hue&amp;You AI pre iOS od verzie 1.1</p>
+  <p class="updated">Posledná aktualizácia: 15. septembra 2026 · Platí pre Hue&amp;You AI pre iOS od verzie 1.1</p>
 
   <h2>1. Zhrnutie</h2>
   <p>Hue&amp;You AI nezbiera, neukladá, neodosiela ani nezdieľa žiadne osobné údaje. Aplikácia nemá používateľské kontá, nepoužíva analytické ani reklamné nástroje a <strong>nevykonáva žiadnu sieťovú komunikáciu</strong>. Všetko — vrátane detekcie tváre, merania farieb aj voliteľného AI zhrnutia — prebieha výlučne v tvojom iPhone.</p>
 
   <h2 id="udaje-tvare">2. Údaje tváre</h2>
   <div class="box">
-    <p><strong>Aké údaje tváre sa spracúvajú.</strong> Keď vyberieš fotku alebo odfotíš selfie, Apple Vision v zariadení nájde tvár a vráti jej obrys a orientačné body (kontúry očí, pier a čeľuste) spolu s maskou siluety osoby. Aplikácia potom z fotky navzorkuje farby pixelov pleti, vlasov a dúhoviek a prevedie ich na farebné merania (hodnoty CIELAB, hĺbka pleti ITA°, uhol odtieňa, kontrast pleť–vlasy, trieda farby očí, odhad tvaru tváre).</p>
+    <p><strong>Aké údaje tváre sa spracúvajú.</strong> Keď vyberieš fotku alebo odfotíš selfie, modely v zariadení nájdu tvár a jej časti: Apple Vision (obrys tváre, orientačné body, maska osoby) a dva modely MediaPipe od Google zabalené v aplikácii (segmentácia vlasy / pleť / oblečenie a model orientačných bodov tváre, ktorý nájde dúhovku). Všetky bežia na procesore tvojho iPhonu. Aplikácia potom z fotky navzorkuje farby pixelov pleti, vlasov a dúhoviek a prevedie ich na farebné merania (hodnoty CIELAB, hĺbka pleti ITA°, uhol odtieňa, kontrast pleť–vlasy, trieda farby očí, odhad tvaru tváre).</p>
     <p><strong>Na čo sa používajú.</strong> Výlučne na odvodenie tvojich farebných odporúčaní (odtiene vlasov, palety líčenia a šatníka) a na vykreslenie voliteľného náhľadu „vyskúšať na fotke“ na tvojej vlastnej fotke. Nepoužívajú sa na identifikáciu, overovanie, reklamu, profilovanie ani na nič iné.</p>
     <p><strong>Kde sú uložené.</strong> Len v pracovnej pamäti (RAM) aplikácie v tvojom iPhone počas prebiehajúcej analýzy. Aplikácia údaje tváre, orientačné body, masky ani merania nikdy nezapisuje na disk, do iCloudu, do databázy ani na žiadny server.</p>
     <p><strong>Ako dlho sa uchovávajú.</strong> Nie dlhšie než trvá aktívna relácia. Zahodia sa automaticky, keď spustíš novú analýzu, zavrieš aplikáciu alebo ju iOS ukončí na pozadí.</p>
@@ -108,7 +108,7 @@
   <h2>4. Apple Intelligence („AI stylista“)</h2>
   <p>Funkcia „AI stylista“ používa Apple <em>Foundation Models</em> (Apple Intelligence) priamo v zariadení. Dostupná je len tam, kde je Apple Intelligence podporovaná a zapnutá, a beží výlučne v tvojom iPhone.</p>
   <p>Modelu sa odovzdávajú len číselné, neidentifikujúce merania — podtón, ITA°, úroveň vlasov, kontrast, sezónny typ, trieda farby očí a názvy odporúčaných odtieňov. <strong>Fotka ani údaje tváre sa modelu nikdy neodovzdávajú.</strong></p>
-  <p><strong>Aplikácia nepoužíva žiadnu cudziu AI službu.</strong> Nič sa neposiela do OpenAI, Google, Anthropic, Microsoft ani inému cloudovému modelu či poskytovateľovi. Aplikácia nevykonáva žiadne sieťové požiadavky.</p>
+  <p><strong>Aplikácia nepoužíva žiadnu cudziu AI službu.</strong> Nič sa neposiela do OpenAI, Google, Anthropic, Microsoft ani inému cloudovému modelu či poskytovateľovi. Modely MediaPipe spomenuté vyššie sú offline softvérové súčasti zabalené v aplikácii (licencia Apache 2.0), nie služba — s Google ani s nikým iným nekomunikujú. Aplikácia nevykonáva žiadne sieťové požiadavky.</p>
 
   <h2>5. Zdieľanie s tretími stranami</h2>
   <p>Žiadne. Aplikácia nezdieľa údaje s nikým. Neobsahuje cudzie SDK, analytiku, reklamu, hlásenie pádov ani servery, ktoré by sme prevádzkovali.</p>
