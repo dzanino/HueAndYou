@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hue&You AI — Podpora</title>
+<title>Hue&You AI — Podpora / Support / Hilfe / Soporte / Підтримка</title>
 <style>
   :root { --plum: #2c1929; --rose: #c47484; --ink: #f4eef2; --muted: #c9b8c4; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,6 +24,8 @@
     display: inline-block; margin: 10px 0 4px; background: var(--rose); color: #fff;
     padding: 12px 22px; border-radius: 999px; text-decoration: none; font-weight: 600;
   }
+  nav.langs { font-size: .85rem; color: var(--muted); margin-top: 12px; }
+  nav.langs a { color: var(--rose); }
   hr { border: none; border-top: 1px solid rgba(255,255,255,.14); margin: 34px 0; }
   footer { margin-top: 36px; color: rgba(255,255,255,.35); font-size: .78rem; text-align: center; }
 </style>
@@ -31,13 +33,14 @@
 <body>
 <main>
   <a class="back" href="index.html">← Hue&amp;You AI</a>
-  <h1>Podpora</h1>
+  <nav class="langs"><a href="#podpora" lang="sk">Slovenčina</a> · <a href="#support" lang="en">English</a> · <a href="#hilfe" lang="de">Deutsch</a> · <a href="#soporte" lang="es">Español</a> · <a href="#pidtrymka" lang="uk">Українська</a></nav>
+  <h1 id="podpora">Podpora</h1>
 
   <h2>Najčastejšie otázky</h2>
   <ul>
     <li><strong>Fotka sa nedá analyzovať.</strong> Použi čelný portrét pri dennom svetle, tvár nech vyplní ovál šablóny a oči sedia na linke. Výrez môžeš po odfotení doladiť.</li>
     <li><strong>Vlasy sa nezmerali.</strong> Pri krátkych alebo zopnutých vlasoch nastav prirodzenú úroveň ručne (1 = čierna, 10 = najsvetlejšia blond) — odporúčania sa prepočítajú.</li>
-    <li><strong>AI zhrnutie chýba.</strong> Vyžaduje zariadenie s Apple Intelligence (iOS 26+). Zhrnutie sa generuje po anglicky.</li>
+    <li><strong>AI zhrnutie chýba.</strong> Vyžaduje zariadenie s Apple Intelligence (iOS 26+). Zhrnutie je v jazyku appky, ak ho Apple Intelligence podporuje, inak po anglicky.</li>
     <li><strong>Farby pôsobia posunuto.</strong> Svetlo, objektív aj displej farby posúvajú — výsledky ber ako informovaný východiskový bod, nie verdikt.</li>
     <li><strong>Čo sa deje s mojou tvárou a fotkou?</strong> Všetko beží len v tvojom iPhone alebo iPade. Údaje tváre existujú iba v pamäti počas analýzy, nikam sa neodosielajú, s nikým nezdieľajú a zahodia sa pri novej analýze alebo zavretí appky. Žiadna cudzia AI služba sa nepoužíva. Podrobnosti: <a href="privacy.html#udaje-tvare">Zásady ochrany súkromia, časť 2</a>.</li>
   </ul>
@@ -48,18 +51,68 @@
 
   <hr>
 
-  <h1 class="en">Support</h1>
+  <h1 class="en" id="support">Support</h1>
   <h2>FAQ</h2>
   <ul class="en">
     <li><strong>The photo cannot be analysed.</strong> Use a frontal portrait in daylight; fill the template oval with your face, eyes on the line. You can fine-tune the crop after the shot.</li>
     <li><strong>Hair was not measured.</strong> With short or tied-up hair, set your natural level manually (1 = black, 10 = lightest blonde) — recommendations recalculate.</li>
-    <li><strong>The AI summary is missing.</strong> It requires a device with Apple Intelligence (iOS 26+). Summaries are generated in English.</li>
+    <li><strong>The AI summary is missing.</strong> It requires a device with Apple Intelligence (iOS 26+). The summary is written in the app's language when Apple Intelligence supports it, otherwise in English.</li>
     <li><strong>Colours look shifted.</strong> Light, lens and screen all shift colours — treat results as an informed starting point, not a verdict.</li>
     <li><strong>What happens to my face and photo?</strong> Everything runs on your iPhone or iPad only. Face data exists solely in memory during the analysis, is never uploaded or shared, and is discarded when you start a new analysis or close the app. No third-party AI service is used. Details: <a href="privacy.html#face-data">Privacy Policy, section 2</a>.</li>
   </ul>
   <h2>Contact us</h2>
   <p class="en">Questions? We usually reply within 48 hours.</p>
   <a class="mail" href="mailto:jansikuta@me.com?subject=Hue%26You%20AI%20—%20support">jansikuta@me.com</a>
+  <hr>
+
+  <div lang="de">
+  <h1 class="en" id="hilfe">Hilfe</h1>
+  <h2>Häufige Fragen</h2>
+  <ul class="en">
+    <li><strong>Das Foto lässt sich nicht analysieren.</strong> Verwende ein frontales Porträt bei Tageslicht; dein Gesicht sollte das Oval der Vorlage ausfüllen, die Augen liegen auf der Linie. Den Bildausschnitt kannst du nach der Aufnahme noch anpassen.</li>
+    <li><strong>Die Haare wurden nicht gemessen.</strong> Bei kurzen oder zusammengebundenen Haaren stellst du deine natürliche Haarstufe manuell ein (1 = Schwarz, 10 = hellstes Blond) – die Empfehlungen werden neu berechnet.</li>
+    <li><strong>Die KI-Zusammenfassung fehlt.</strong> Sie erfordert ein Gerät mit Apple Intelligence (iOS 26+). Die Zusammenfassung erscheint in der Sprache der App, sofern Apple Intelligence sie unterstützt, sonst auf Englisch.</li>
+    <li><strong>Die Farben wirken verschoben.</strong> Licht, Objektiv und Display verschieben Farben – betrachte die Ergebnisse als fundierten Ausgangspunkt, nicht als Urteil.</li>
+    <li><strong>Was passiert mit meinem Gesicht und meinem Foto?</strong> Alles läuft ausschließlich auf deinem iPhone oder iPad. Gesichtsdaten existieren nur während der Analyse im Arbeitsspeicher, werden nie hochgeladen oder weitergegeben und werden verworfen, sobald du eine neue Analyse startest oder die App schließt. Es wird kein KI-Dienst von Drittanbietern genutzt. Details: <a href="privacy.html#gesichtsdaten">Datenschutzerklärung, Abschnitt 2</a>.</li>
+  </ul>
+  <h2>Schreib uns</h2>
+  <p class="en">Fragen? Wir antworten in der Regel innerhalb von 48 Stunden.</p>
+  <a class="mail" href="mailto:jansikuta@me.com?subject=Hue%26You%20AI%20—%20Hilfe">jansikuta@me.com</a>
+  </div>
+
+  <hr>
+
+  <div lang="es">
+  <h1 class="en" id="soporte">Soporte</h1>
+  <h2>Preguntas frecuentes</h2>
+  <ul class="en">
+    <li><strong>No se puede analizar la foto.</strong> Usa un retrato frontal con luz de día; que tu cara llene el óvalo de la plantilla y los ojos queden sobre la línea. Puedes ajustar el encuadre después de hacer la foto.</li>
+    <li><strong>No se ha medido el pelo.</strong> Si tienes el pelo corto o recogido, ajusta tu nivel natural a mano (1 = negro, 10 = rubio más claro) y las recomendaciones se recalcularán.</li>
+    <li><strong>Falta el resumen de IA.</strong> Requiere un dispositivo con Apple Intelligence (iOS 26+). El resumen se genera en el idioma de la app si Apple Intelligence lo admite; si no, en inglés.</li>
+    <li><strong>Los colores se ven desplazados.</strong> La luz, el objetivo y la pantalla alteran los colores: toma los resultados como un punto de partida bien fundamentado, no como un veredicto.</li>
+    <li><strong>¿Qué pasa con mi cara y mi foto?</strong> Todo se ejecuta solo en tu iPhone o iPad. Los datos faciales existen únicamente en la memoria durante el análisis, nunca se suben ni se comparten y se descartan al iniciar un nuevo análisis o cerrar la app. No se usa ningún servicio de IA de terceros. Más detalles: <a href="privacy.html#datos-faciales">Política de privacidad, sección 2</a>.</li>
+  </ul>
+  <h2>Escríbenos</h2>
+  <p class="en">¿Tienes preguntas? Solemos responder en un plazo de 48 horas.</p>
+  <a class="mail" href="mailto:jansikuta@me.com?subject=Hue%26You%20AI%20—%20soporte">jansikuta@me.com</a>
+  </div>
+
+  <hr>
+
+  <div lang="uk">
+  <h1 class="en" id="pidtrymka">Підтримка</h1>
+  <h2>Часті запитання</h2>
+  <ul class="en">
+    <li><strong>Фото не вдається проаналізувати.</strong> Використовуй фронтальний портрет при денному світлі; обличчя має заповнювати овал шаблону, а очі — бути на лінії. Кадрування можна підправити після зйомки.</li>
+    <li><strong>Волосся не виміряно.</strong> Якщо волосся коротке або зібране, встанови свій природний рівень вручну (1 = чорний, 10 = найсвітліший блонд) — рекомендації перерахуються.</li>
+    <li><strong>Немає ШІ-резюме.</strong> Для нього потрібен пристрій з Apple Intelligence (iOS 26+). Резюме створюється мовою застосунку, якщо Apple Intelligence її підтримує, інакше — англійською.</li>
+    <li><strong>Кольори виглядають зміщеними.</strong> Освітлення, об’єктив і екран зміщують кольори — сприймай результати як обґрунтовану відправну точку, а не як вирок.</li>
+    <li><strong>Що відбувається з моїм обличчям і фото?</strong> Усе працює лише на твоєму iPhone або iPad. Дані обличчя існують тільки в пам’яті під час аналізу, ніколи не завантажуються й не передаються і відкидаються, щойно ти починаєш новий аналіз або закриваєш застосунок. Жодні сторонні ШІ-сервіси не використовуються. Докладніше: <a href="privacy.html#dani-oblychchia">Політика конфіденційності, розділ 2</a>.</li>
+  </ul>
+  <h2>Напиши нам</h2>
+  <p class="en">Маєш запитання? Зазвичай ми відповідаємо протягом 48 годин.</p>
+  <a class="mail" href="mailto:jansikuta@me.com?subject=Hue%26You%20AI%20—%20підтримка">jansikuta@me.com</a>
+  </div>
 
   <footer>© 2026 Ján Sikuta · Hue&amp;You AI</footer>
 </main>
