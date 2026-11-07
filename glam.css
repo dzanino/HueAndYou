@@ -87,3 +87,16 @@ a.card .emoji{width:52px;height:52px;margin:0 auto 10px!important;display:grid!i
 footer{color:var(--soft)!important;}
 footer a{color:var(--rose-2)!important;}
 @media (max-width:600px){body{background-attachment:scroll!important;}}
+
+/* Jazyky: jeden jazyk naraz (len so zapnutým JavaScriptom; bez neho ostáva všetko viditeľné) */
+html.pending body{visibility:hidden;}
+html.js .lang-block:not(.active){display:none;}
+html.js main > hr{display:none;}
+html.js nav.langs{display:none;}
+html.js .lang-block .en,html.js .lang-block h1.en{color:inherit!important;}
+html.js .lang-block ul.en li{color:#e9dde5!important;}
+.subbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:6px;}
+.lang-select{appearance:none;-webkit-appearance:none;max-width:100%;min-height:36px;padding:7px 30px 7px 13px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink);font:inherit;font-size:.86rem;cursor:pointer;
+  background:rgba(255,255,255,.06) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23f5c6c9' stroke-width='1.5'/></svg>") no-repeat right 12px center;}
+.lang-select option{color:#2a0f1f;background:#fff;}
+.lang-select:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
