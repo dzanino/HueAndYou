@@ -1,119 +1,239 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hue&You AI</title>
-<style>
-  :root {
-    --plum: #2c1929; --rose: #c47484; --ink: #f4eef2; --muted: #c9b8c4;
-    --card: rgba(255,255,255,.06);
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: radial-gradient(120% 120% at 20% 0%, #46223f 0%, var(--plum) 55%, #180e17 100%);
-    color: var(--ink); min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    padding: 32px 20px;
-  }
-  main { max-width: 640px; width: 100%; text-align: center; }
-  .halo {
-    width: 128px; height: 128px; margin: 0 auto 24px; border-radius: 50%;
-    background: conic-gradient(from 270deg, #e8654f, #f2c14e, #7cb65b, #3fb8af, #7b93d6, #a48fc0, #c2308f, #c1122f, #e8654f);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .halo .inner {
-    width: 96px; height: 96px; border-radius: 50%; background: var(--plum);
-    display: flex; align-items: center; justify-content: center; font-size: 44px;
-  }
-  h1 { font-size: 2.2rem; letter-spacing: -.02em; margin-bottom: 8px; }
-  .tagline { color: var(--muted); font-size: 1.05rem; line-height: 1.5; margin-bottom: 8px; }
-  .motto { color: var(--rose); font-style: italic; margin-bottom: 32px; }
-  .store { display: inline-flex; align-items: center; gap: 10px; background: var(--rose); color: #fff;
-    text-decoration: none; font-weight: 600; padding: 12px 22px; border-radius: 14px; margin-bottom: 8px; }
-  .store:hover { filter: brightness(1.08); }
-  .store-sub { color: var(--muted); font-size: .8rem; margin-bottom: 28px; }
-  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 32px; }
-  @media (max-width: 480px) { .cards { grid-template-columns: 1fr; } }
-  a.card {
-    display: block; background: var(--card); border: 1px solid rgba(255,255,255,.12);
-    border-radius: 16px; padding: 20px 16px; text-decoration: none; color: var(--ink);
-    transition: background .15s ease;
-  }
-  a.card:hover { background: rgba(255,255,255,.11); }
-  a.card .emoji { font-size: 26px; display: block; margin-bottom: 8px; }
-  a.card .title { font-weight: 600; margin-bottom: 4px; }
-  a.card .sub { color: var(--muted); font-size: .85rem; }
-  .privacy-line { color: var(--muted); font-size: .85rem; line-height: 1.5; }
-  footer { margin-top: 28px; color: rgba(255,255,255,.35); font-size: .78rem; }
-</style>
-<link rel="stylesheet" href="glam.css?v=20261017">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.title">Hue&amp;You AI: color analysis from one photo</title>
+<meta name="description" data-i18n-content="meta.desc" content="Find your color type from a single photo, then try hair, lipstick, blush, a T-shirt or a shirt right on it. Measured, explained and private on your iPhone or iPad.">
+<meta name="theme-color" content="#1d0f1b">
+<meta name="apple-itunes-app" content="app-id=6802354065">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="canonical" href="https://dzanino.github.io/HueAndYou/index.html">
+<link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/HueAndYou/index.html">
+<link rel="alternate" hreflang="sk" href="https://dzanino.github.io/HueAndYou/index.html?lang=sk">
+<link rel="alternate" hreflang="en" href="https://dzanino.github.io/HueAndYou/index.html?lang=en">
+<link rel="alternate" hreflang="de" href="https://dzanino.github.io/HueAndYou/index.html?lang=de">
+<link rel="alternate" hreflang="es" href="https://dzanino.github.io/HueAndYou/index.html?lang=es">
+<link rel="alternate" hreflang="uk" href="https://dzanino.github.io/HueAndYou/index.html?lang=uk">
+<link rel="alternate" hreflang="fr" href="https://dzanino.github.io/HueAndYou/index.html?lang=fr">
+<link rel="alternate" hreflang="it" href="https://dzanino.github.io/HueAndYou/index.html?lang=it">
+<link rel="alternate" hreflang="pt-BR" href="https://dzanino.github.io/HueAndYou/index.html?lang=pt-BR">
+<link rel="alternate" hreflang="pl" href="https://dzanino.github.io/HueAndYou/index.html?lang=pl">
+<link rel="alternate" hreflang="cs" href="https://dzanino.github.io/HueAndYou/index.html?lang=cs">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hue&amp;You AI">
+<meta property="og:url" content="https://dzanino.github.io/HueAndYou/index.html">
+<meta property="og:title" data-i18n-content="meta.title" content="Hue&amp;You AI: color analysis from one photo">
+<meta property="og:description" data-i18n-content="meta.desc" content="Find your color type from a single photo, then try hair, lipstick, blush, a T-shirt or a shirt right on it. Measured, explained and private on your iPhone or iPad.">
+<meta property="og:image" content="https://dzanino.github.io/HueAndYou/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hue&amp;You AI: the same portrait before and after a color try-on in the app.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Hue&You AI","operatingSystem":"iOS","applicationCategory":"LifestyleApplication","url":"https://apps.apple.com/app/id6802354065","image":"https://dzanino.github.io/HueAndYou/img/icon-192.png","description":"Color analysis from a single photo: hair shades, makeup and wardrobe colors, grounded in measurement. All analysis runs on the device.","inLanguage":["sk","en","de","es","uk","fr","it","pt-BR","pl","cs"],"offers":{"@type":"Offer","price":"7.99","priceCurrency":"EUR"}}
+</script>
+<script>document.documentElement.className='js pending';setTimeout(function(){document.documentElement.classList.remove('pending')},1500);</script>
+<link rel="stylesheet" href="glam.css?v=20261107">
+<link rel="stylesheet" href="home.css?v=20261107">
+<script src="i18n.js?v=20261107"></script>
 </head>
 <body>
-<main>
-  <div class="halo"><div class="inner">👤</div></div>
-  <h1>Hue&amp;You AI</h1>
-  <p class="tagline">Farebná typológia z jednej fotky — odtiene vlasov, líčenie a farby šatníka, podložené meraním.<br>
-  Colour analysis from a single photo — hair shades, makeup and wardrobe colours, grounded in measurement.<br>
-  <span lang="de">Farbtyp-Analyse aus einem einzigen Foto – Haarfarbtöne, Make-up und Garderobenfarben, gestützt auf Messungen.</span><br>
-  <span lang="es">Análisis de color a partir de una sola foto: tonos de pelo, maquillaje y colores de vestuario, basados en mediciones.</span><br>
-  <span lang="uk">Аналіз колоротипу з одного фото — відтінки волосся, макіяж і кольори гардеробу на основі вимірювань.</span><br>
-  <span lang="fr">Analyse colorimétrique à partir d'une seule photo : nuances de cheveux, maquillage et couleurs de garde-robe, fondées sur la mesure.</span><br>
-  <span lang="it">Analisi del tipo di colore da una sola foto: tonalità di capelli, trucco e colori del guardaroba, basati su misurazioni.</span><br>
-  <span lang="pt-BR">Análise de coloração pessoal a partir de uma única foto: tons de cabelo, maquiagem e cores de guarda-roupa, com base em medições.</span><br>
-  <span lang="pl">Analiza typu kolorystycznego z jednego zdjęcia: odcienie włosów, makijaż i kolory garderoby, oparte na pomiarach.</span><br>
-  <span lang="cs">Analýza barevného typu z jediné fotky: odstíny vlasů, líčení a barvy šatníku, podložené měřením.</span></p>
-  <p class="motto">„Nemeň, kým si — vyzdvihujeme a zvýrazňujeme, kto si.“</p>
+<header class="topbar">
+  <a class="brand" href="#top"><img src="img/logo.webp" width="36" height="36" alt=""><span>Hue&amp;You AI</span></a>
+  <nav class="toplinks">
+    <a href="#features" data-i18n="nav.features">Features</a>
+    <a href="#seasons" data-i18n="nav.seasons">Seasons</a>
+    <a href="#privacy" data-i18n="nav.privacy">Privacy</a>
+  </nav>
+  <div class="topright">
+    <label class="lang-wrap"><span class="sr" data-i18n="a11y.lang">Language</span>
+      <select class="lang-select" id="lang" data-lang-select><option value="sk" lang="sk">Slovenčina</option><option value="en" lang="en" selected>English</option><option value="de" lang="de">Deutsch</option><option value="es" lang="es">Español</option><option value="uk" lang="uk">Українська</option><option value="fr" lang="fr">Français</option><option value="it" lang="it">Italiano</option><option value="pt-BR" lang="pt-BR">Português (Brasil)</option><option value="pl" lang="pl">Polski</option><option value="cs" lang="cs">Čeština</option></select>
+    </label>
+    <a class="toplink-cta" href="https://apps.apple.com/app/id6802354065" data-i18n="nav.get">Get the app</a>
+  </div>
+</header>
 
-  <a class="store" href="https://apps.apple.com/app/id6802354065">Stiahnuť v App Store</a>
-  <p class="store-sub">Download on the App Store · Im App Store laden · Descargar en App Store · Завантажити в App Store · Télécharger dans l'App Store · Scarica su App Store · Baixar na App Store · Pobierz z App Store · Stáhnout v App Store<br>iPhone a iPad · 7,99 €, jednorazovo, bez predplatného</p>
+<main id="top">
 
-  <div class="cards">
-    <a class="card" href="privacy.html">
-      <span class="emoji">🔒</span>
-      <span class="title">Zásady ochrany súkromia</span>
-      <span class="sub">Privacy Policy</span>
-    </a>
-    <a class="card" href="support.html">
-      <span class="emoji">💬</span>
-      <span class="title">Podpora</span>
-      <span class="sub">Support</span>
-    </a>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hue&amp;You AI</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Color analysis from a photo</p>
+    <p class="hero-lead" data-i18n="hero.lead">Hair shades, makeup and wardrobe colors, grounded in measurement. Try them right on your photo, privately on your device.</p>
+    <p class="motto" data-i18n="hero.motto">Don't change who you are: we lift and highlight who you are.</p>
+    <a class="store" href="https://apps.apple.com/app/id6802354065"><svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.9-.9-3.1-.8c-1.6 0-3.1.9-3.9 2.3-1.7 2.9-.4 7.2 1.2 9.5.8 1.1 1.7 2.4 3 2.4 1.2 0 1.7-.8 3.1-.8s1.9.8 3.1.8c1.3 0 2.1-1.1 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4zM14.1 5.700c.6-.8 1.100-1.900 1-3-.9 0-2.100.6-2.800 1.400-.6.7-1.100 1.800-1 2.900 1 .1 2.100-.5 2.800-1.300z"/></svg><span data-i18n="hero.cta">Download on the App Store</span></a>
+    <p class="store-sub" data-i18n="hero.price">iPhone and iPad · €7.99 or local price, one time, no subscription</p>
   </div>
 
-  <p class="privacy-line"><strong>Čo je nové (2.0):</strong> iPhone aj iPad, skúšanie trička či košele priamo na fotke (aj pod vlasmi), lepšie rozpoznanie farby očí a vlasov, upozornenie na rozmazanú fotku či protisvetlo, skratky pre Siri. 2.1: teraz aj po nemecky, španielsky a ukrajinsky. 2.4: teraz aj vo francúzštine, taliančine, brazílskej portugalčine, poľštine a češtine.<br>
-  <strong>What's new (2.0):</strong> iPhone and iPad, try a T-shirt or shirt right on your photo (even under hair), improved detection of eye and hair colour, blur/backlight warnings, Siri Shortcuts. 2.1: now also in German, Spanish and Ukrainian. 2.4: now also in French, Italian, Portuguese (Brazil), Polish and Czech.<br>
-  <span lang="de"><strong>Was ist neu (2.0):</strong> iPhone und iPad, T-Shirt oder Hemd direkt auf deinem Foto anprobieren (auch unter den Haaren), verbesserte Erkennung von Augen- und Haarfarbe, Warnungen bei unscharfem Foto oder Gegenlicht, Siri-Kurzbefehle. 2.1: jetzt auch auf Deutsch, Spanisch und Ukrainisch. 2.4: jetzt auch auf Französisch, Italienisch, Portugiesisch (Brasilien), Polnisch und Tschechisch.</span><br>
-  <span lang="es"><strong>Novedades (2.0):</strong> iPhone y iPad, prueba una camiseta o una camisa directamente en tu foto (también bajo el pelo), detección mejorada del color de ojos y de pelo, avisos de foto borrosa o contraluz, atajos de Siri. 2.1: ahora también en alemán, español y ucraniano. 2.4: ahora también en francés, italiano, portugués (Brasil), polaco y checo.</span><br>
-  <span lang="uk"><strong>Що нового (2.0):</strong> iPhone і iPad, приміряння футболки чи сорочки прямо на фото (навіть під волоссям), покращене розпізнавання кольору очей і волосся, попередження про розмите фото чи контрове світло, швидкі команди Siri. 2.1: тепер також німецькою, іспанською та українською. 2.4: тепер також французькою, італійською, португальською (Бразилія), польською та чеською.</span><br>
-  <span lang="fr"><strong>Nouveautés (2.0) :</strong> iPhone et iPad, essaie un t-shirt ou une chemise directement sur ta photo (même sous les cheveux), meilleure détection de la couleur des yeux et des cheveux, alertes en cas de photo floue ou de contre-jour, raccourcis Siri. 2.1 : désormais aussi en allemand, espagnol et ukrainien. 2.4 : désormais aussi en français, italien, portugais (Brésil), polonais et tchèque.</span><br>
-  <span lang="it"><strong>Novità (2.0):</strong> iPhone e iPad, prova una T-shirt o una camicia direttamente sulla tua foto (anche sotto i capelli), riconoscimento migliorato del colore di occhi e capelli, avvisi per foto sfocata o controluce, Comandi rapidi di Siri. 2.1: ora anche in tedesco, spagnolo e ucraino. 2.4: ora anche in francese, italiano, portoghese brasiliano, polacco e ceco.</span><br>
-  <span lang="pt-BR"><strong>Novidades (2.0):</strong> iPhone e iPad, experimente uma camiseta ou camisa direto na sua foto (inclusive sob o cabelo), reconhecimento aprimorado da cor dos olhos e do cabelo, avisos de foto desfocada ou contraluz, atalhos da Siri. 2.1: agora também em alemão, espanhol e ucraniano. 2.4: agora também em francês, italiano, português (Brasil), polonês e tcheco.</span><br>
-  <span lang="pl"><strong>Co nowego (2.0):</strong> iPhone i iPad, przymierzanie T-shirtu lub koszuli bezpośrednio na twoim zdjęciu (także pod włosami), lepsze rozpoznawanie koloru oczu i włosów, ostrzeżenia o nieostrym zdjęciu lub zdjęciu pod światło, skróty Siri. 2.1: teraz także po niemiecku, hiszpańsku i ukraińsku. 2.4: teraz także po francusku, włosku, portugalsku (Brazylia), polsku i czesku.</span><br>
-  <span lang="cs"><strong>Co je nového (2.0):</strong> iPhone a iPad, vyzkoušení trička nebo košile přímo na tvé fotce (i pod vlasy), lepší rozpoznání barvy očí a vlasů, upozornění na rozmazanou fotku nebo protisvětlo, zkratky Siri. 2.1: nyní také v němčině, španělštině a ukrajinštině. 2.4: nyní také ve francouzštině, italštině, brazilské portugalštině, polštině a češtině.</span></p>
+  <figure class="stage">
+    <div class="arch-glow" aria-hidden="true"></div>
+    <div class="arch" id="ba" style="--pos:50%">
+      <picture>
+        <source srcset="img/look-original.webp" type="image/webp">
+        <img class="ba-img" src="img/look-original.jpg" width="800" height="988" data-i18n-alt="ba.altOriginal" alt="Portrait of a woman with natural dark brown hair: the original photo." fetchpriority="high">
+      </picture>
+      <picture class="ba-after">
+        <source id="ba-src" srcset="img/look-auburn.webp" type="image/webp">
+        <img class="ba-img" id="ba-img" src="img/look-auburn.jpg" width="800" height="988" data-i18n-alt="ba.altAuburn" alt="The same portrait with auburn hair, rose lipstick and a soft pink T-shirt, previewed by the app.">
+      </picture>
+      <span class="ba-tag left" data-i18n="ba.original">Original</span>
+      <span class="ba-tag right" data-i18n="ba.try">Try-on</span>
+      <div class="ba-line" aria-hidden="true"><i></i></div>
+      <input class="ba-range" id="ba-range" type="range" min="0" max="100" value="50" data-i18n-aria="ba.label" aria-label="Compare the original photo with the try-on">
+    </div>
+    <div class="looks" role="group" data-i18n-aria="ba.looks" aria-label="Choose a look">
+      <button type="button" class="look on" data-look="auburn" data-alt="ba.altAuburn" aria-pressed="true"><i style="--c:#7a2a2e"></i><span data-i18n="look.auburn">Auburn</span></button>
+      <button type="button" class="look" data-look="chocolate" data-alt="ba.altChocolate" aria-pressed="false"><i style="--c:#3b2a2a"></i><span data-i18n="look.chocolate">Chocolate</span></button>
+      <button type="button" class="look" data-look="copper" data-alt="ba.altCopper" aria-pressed="false"><i style="--c:#c1562c"></i><span data-i18n="look.copper">Copper</span></button>
+    </div>
+    <figcaption class="ba-note" data-i18n="ba.note">Preview created by the app, on the device.</figcaption>
+  </figure>
+</section>
 
-  <p class="privacy-line">Všetky analýzy bežia priamo v zariadení. Fotky ani údaje tváre nikam neodchádzajú a žiadna cudzia AI služba sa nepoužíva.<br>
-  All analysis runs on-device. Photos and face data never leave your iPhone or iPad; no third-party AI service is used.
-  <a href="privacy.html#face-data" style="color:var(--rose)">How face data is handled →</a><br>
-  <span lang="de">Alle Analysen laufen direkt auf dem Gerät. Fotos und Gesichtsdaten verlassen niemals dein iPhone oder iPad; es wird kein KI-Dienst von Drittanbietern genutzt.
-  <a href="privacy.html#gesichtsdaten" style="color:var(--rose)">Umgang mit Gesichtsdaten →</a></span><br>
-  <span lang="es">Todo el análisis se realiza en el dispositivo. Las fotos y los datos faciales nunca salen de tu iPhone o iPad; no se usa ningún servicio de IA de terceros.
-  <a href="privacy.html#datos-faciales" style="color:var(--rose)">Cómo se tratan los datos faciales →</a></span><br>
-  <span lang="uk">Увесь аналіз виконується на пристрої. Фото й дані обличчя ніколи не залишають твій iPhone або iPad; сторонні ШІ-сервіси не використовуються.
-  <a href="privacy.html#dani-oblychchia" style="color:var(--rose)">Як обробляються дані обличчя →</a></span><br>
-  <span lang="fr">Toutes les analyses s'effectuent directement sur l'appareil. Les photos et les données du visage ne quittent jamais ton iPhone ou ton iPad ; aucun service d'IA tiers n'est utilisé.
-  <a href="privacy.html#donnees-visage" style="color:var(--rose)">Traitement des données du visage →</a></span><br>
-  <span lang="it">Tutte le analisi avvengono direttamente sul dispositivo. Le foto e i dati del volto non lasciano mai il tuo iPhone o iPad; non viene usato alcun servizio di IA di terze parti.
-  <a href="privacy.html#dati-volto" style="color:var(--rose)">Come vengono trattati i dati del volto →</a></span><br>
-  <span lang="pt-BR">Toda a análise acontece no próprio aparelho. As fotos e os dados do rosto nunca saem do seu iPhone ou iPad; nenhum serviço de IA de terceiros é usado.
-  <a href="privacy.html#dados-rosto" style="color:var(--rose)">Como os dados do rosto são tratados →</a></span><br>
-  <span lang="pl">Cała analiza odbywa się bezpośrednio na urządzeniu. Zdjęcia i dane twarzy nigdy nie opuszczają twojego iPhone'a ani iPada; nie jest używana żadna usługa AI innych dostawców.
-  <a href="privacy.html#dane-twarzy" style="color:var(--rose)">Jak traktowane są dane twarzy →</a></span><br>
-  <span lang="cs">Všechny analýzy probíhají přímo v zařízení. Fotky ani údaje o obličeji nikdy neopustí tvůj iPhone nebo iPad; nepoužívá se žádná AI služba třetí strany.
-  <a href="privacy.html#udaje-o-obliceji" style="color:var(--rose)">Jak zacházíme s údaji o obličeji →</a></span></p>
+<section class="block how reveal">
+  <h2 class="title" data-i18n="how.title">One photo, three steps</h2>
+  <ol class="steps">
+    <li><span class="num" aria-hidden="true">1</span><h3 data-i18n="how.1.t">Take a photo</h3><p data-i18n="how.1.d">A selfie or a picture from your library, in daylight. A guide helps you frame your face and warns about blur or backlight.</p></li>
+    <li><span class="num" aria-hidden="true">2</span><h3 data-i18n="how.2.t">The app measures</h3><p data-i18n="how.2.d">Skin, hair, eyes and the contrast between them are measured in CIELAB, right on your device.</p></li>
+    <li><span class="num" aria-hidden="true">3</span><h3 data-i18n="how.3.t">You see why</h3><p data-i18n="how.3.d">Your color type, hair shades, makeup and wardrobe, each with the measurements behind it. Then try them on your photo.</p></li>
+  </ol>
+</section>
 
-  <footer><span data-fz>©</span> 2026 Ján Sikuta · Hue&amp;You AI</footer>
+<section class="block reveal" id="features">
+  <h2 class="title" data-i18n="feat.title">Everything your colors can tell you</h2>
+  <p class="lead" data-i18n="feat.lead">Concrete guidance from your own measurements, not a quiz.</p>
+  <div class="bento">
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="7.500" r="1.400"/><circle cx="16.500" cy="12" r="1.400"/><circle cx="12" cy="16.500" r="1.400"/><circle cx="7.500" cy="12" r="1.400"/></svg></span><h3 data-i18n="f1.t">Your color type</h3><p data-i18n="f1.d">Spring, summer, autumn or winter, anchored in your measured undertone, depth and contrast.</p></article>
+    <article class="card wide"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.500 3.500L4 6l1.700 4 2.300-1v11.500h8V9l2.300 1L20 6l-4.500-2.500a3.500 3.500 0 0 1-7 0z"/></svg></span><h3 data-i18n="f5.t">Try it on your photo</h3><p data-i18n="f5.d">Hair color, lipstick, blush, eyeshadow, a T-shirt or a shirt, right on your picture. Combine them and hold the photo to compare.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21c-1-6 0-9 2-12s2-5 1-6M12 21c-1-6 0-9 2-12s2-5 1-6M18 21c-1-6 0-9 1-11"/></svg></span><h3 data-i18n="f2.t">Hair shades in your natural zone</h3><p data-i18n="f2.d">Candidates within two levels of your natural depth, each with the why, a match score and a note for your colorist.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21v-9h6v9zM10 12V6l4-3v9M8 21h8"/></svg></span><h3 data-i18n="f3.t">Makeup for your type</h3><p data-i18n="f3.d">Foundation base by undertone, plus blush, lipstick and eyeshadow in the colors of your type.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.500V7.700c0-.8.5-1.300 1.200-1.700A2 2 0 1 0 10 4.300M12 8.500l9 6.500c1 .8.5 2.500-.8 2.500H3.800c-1.300 0-1.800-1.700-.8-2.500z"/></svg></span><h3 data-i18n="f4.t">Wardrobe and jewelry</h3><p data-i18n="f4.d">Colors that lift you, your neutrals, colors to handle with care, and the metals that suit you.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16.500L16.500 3 21 7.500 7.500 21zM7 12.500l2 2M10 9.500l2 2M13 6.500l2 2"/></svg></span><h3 data-i18n="f6.t">Measured and explained</h3><p data-i18n="f6.d">Measurements use CIELAB, with ITA°, hue angle and ΔL* contrast. The app always shows the numbers behind the verdict.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="13" height="16" rx="2"/><rect x="14" y="9" width="7" height="12" rx="1.700" fill="#2c1729"/></svg></span><h3 data-i18n="f7.t">iPhone and iPad</h3><p data-i18n="f7.d">Made for both, including Split View and Slide Over on iPad.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.500 11a6.500 6.500 0 0 0 13 0M12 17.500V21M9 21h6"/></svg></span><h3 data-i18n="f8.t">Shortcuts and Siri</h3><p data-i18n="f8.d">Take a selfie, measure your colors or open your results with a shortcut, and by voice where Siri supports your language.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 2.800 3.800 5.800 3.800 9s-.8 6.200-3.800 9c-3-2.800-3.800-5.800-3.800-9S9 5.800 12 3z"/></svg></span><h3 data-i18n="f9.t">10 languages</h3><p data-i18n="f9.d">English, Slovak, German, Spanish, Ukrainian, French, Italian, Portuguese (Brazil), Polish and Czech.</p></article>
+    <article class="card wide"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3l1.800 5.200L18 10l-5.200 1.800L11 17l-1.800-5.200L4 10l5.200-1.800zM18.500 15l.8 2.200 2.200.8-2.200.8-.8 2.200-.8-2.200-2.200-.8 2.200-.8z"/></svg></span><h3 data-i18n="f10.t">AI summary on the device</h3><p data-i18n="f10.d">Optional. On devices with Apple Intelligence, an on-device model turns your measurements into a short personal note.</p></article>
+  </div>
+</section>
+
+<section class="block reveal" id="seasons">
+  <div class="book">
+    <h2 class="title" data-i18n="exp.title">Explore the four seasons</h2>
+    <p class="lead" data-i18n="exp.lead">Sample palettes from the app. Pick a type and see its colors.</p>
+    <div class="tabs" role="tablist" data-i18n-aria="exp.tabs" aria-label="Color types">
+      <button type="button" class="tab" role="tab" id="tab-spring" aria-controls="panel-spring" aria-selected="true"><span data-c="Spring type">Spring type</span></button>
+      <button type="button" class="tab" role="tab" id="tab-summer" aria-controls="panel-summer" aria-selected="false"><span data-c="Summer type">Summer type</span></button>
+      <button type="button" class="tab" role="tab" id="tab-autumn" aria-controls="panel-autumn" aria-selected="false"><span data-c="Autumn type">Autumn type</span></button>
+      <button type="button" class="tab" role="tab" id="tab-winter" aria-controls="panel-winter" aria-selected="false"><span data-c="Winter type">Winter type</span></button>
+    </div>
+    <div class="panel" id="panel-spring" role="tabpanel" aria-labelledby="tab-spring">
+      <h3 class="panel-name" data-c="Spring type">Spring type</h3>
+      <p class="panel-sum" data-c="Warm and light: your colouring is lifted by clear, sun-touched colours with golden warmth.">Warm and light: your coloring is lifted by clear, sun-touched colors with golden warmth.</p>
+      <div class="groups">
+        <div class="group"><h4 data-i18n="exp.lift">Colors that lift you</h4><ul class="chips"><li class="chip"><i style="--c:#E8654F"></i><span data-c="Coral">Coral</span></li><li class="chip"><i style="--c:#3FB8AF"></i><span data-c="Warm turquoise">Warm turquoise</span></li><li class="chip"><i style="--c:#7CB65B"></i><span data-c="Fresh green">Fresh green</span></li><li class="chip"><i style="--c:#F2C14E"></i><span data-c="Warm yellow">Warm yellow</span></li><li class="chip"><i style="--c:#F08A7A"></i><span data-c="Salmon">Salmon</span></li><li class="chip"><i style="--c:#7B93D6"></i><span data-c="Periwinkle">Periwinkle</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.neutrals">Your neutrals</h4><ul class="chips"><li class="chip"><i style="--c:#B98A5A"></i><span data-c="Camel">Camel</span></li><li class="chip"><i style="--c:#F4EDDD"></i><span data-c="Ivory">Ivory</span></li><li class="chip"><i style="--c:#2E4266"></i><span data-c="Warm navy">Warm navy</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.hair">Hair shade examples</h4><ul class="chips"><li class="chip"><i style="--c:#9C7847"></i><span data-c="Golden blonde">Golden blonde</span></li><li class="chip"><i style="--c:#CBAA6F"></i><span data-c="Honey blonde">Honey blonde</span></li><li class="chip"><i style="--c:#A65A30"></i><span data-c="Light copper">Light copper</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.lips">Lipsticks</h4><ul class="chips"><li class="chip"><i style="--c:#E8654F"></i><span data-c="Coral">Coral</span></li><li class="chip"><i style="--c:#E97B84"></i><span data-c="Warm pink">Warm pink</span></li></ul></div>
+      </div>
+    </div>
+    <div class="panel" id="panel-summer" role="tabpanel" aria-labelledby="tab-summer">
+      <h3 class="panel-name" data-c="Summer type">Summer type</h3>
+      <p class="panel-sum" data-c="Cool and soft: your colouring is flattered by muted, powdery colours with a blue or rosy base.">Cool and soft: your coloring is flattered by muted, powdery colors with a blue or rosy base.</p>
+      <div class="groups">
+        <div class="group"><h4 data-i18n="exp.lift">Colors that lift you</h4><ul class="chips"><li class="chip"><i style="--c:#9DBCD4"></i><span data-c="Powder blue">Powder blue</span></li><li class="chip"><i style="--c:#A48FC0"></i><span data-c="Lavender">Lavender</span></li><li class="chip"><i style="--c:#C48B9F"></i><span data-c="Dusty rose">Dusty rose</span></li><li class="chip"><i style="--c:#6C8CA8"></i><span data-c="Grey-blue">Gray-blue</span></li><li class="chip"><i style="--c:#B04A66"></i><span data-c="Soft raspberry">Soft raspberry</span></li><li class="chip"><i style="--c:#9CAF88"></i><span data-c="Sage">Sage</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.neutrals">Your neutrals</h4><ul class="chips"><li class="chip"><i style="--c:#F2F0EB"></i><span data-c="Soft white">Soft white</span></li><li class="chip"><i style="--c:#C7C9CE"></i><span data-c="Light grey">Light gray</span></li><li class="chip"><i style="--c:#45586E"></i><span data-c="Greyed navy">Grayed navy</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.hair">Hair shade examples</h4><ul class="chips"><li class="chip"><i style="--c:#8A7864"></i><span data-c="Ash blonde">Ash blonde</span></li><li class="chip"><i style="--c:#A6947D"></i><span data-c="Light ash blonde">Light ash blonde</span></li><li class="chip"><i style="--c:#52443A"></i><span data-c="Ash light brown">Ash light brown</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.lips">Lipsticks</h4><ul class="chips"><li class="chip"><i style="--c:#C86B7F"></i><span data-c="Rose">Rose</span></li><li class="chip"><i style="--c:#9E5568"></i><span data-c="Soft berry">Soft berry</span></li></ul></div>
+      </div>
+    </div>
+    <div class="panel" id="panel-autumn" role="tabpanel" aria-labelledby="tab-autumn">
+      <h3 class="panel-name" data-c="Autumn type">Autumn type</h3>
+      <p class="panel-sum" data-c="Warm and deep: your colouring glows next to earthy, spiced colours with golden depth.">Warm and deep: your coloring glows next to earthy, spiced colors with golden depth.</p>
+      <div class="groups">
+        <div class="group"><h4 data-i18n="exp.lift">Colors that lift you</h4><ul class="chips"><li class="chip"><i style="--c:#B4532A"></i><span data-c="Rust">Rust</span></li><li class="chip"><i style="--c:#70703E"></i><span data-c="Olive">Olive</span></li><li class="chip"><i style="--c:#C9A227"></i><span data-c="Mustard">Mustard</span></li><li class="chip"><i style="--c:#216F6B"></i><span data-c="Teal">Teal</span></li><li class="chip"><i style="--c:#C13A22"></i><span data-c="Tomato red">Tomato red</span></li><li class="chip"><i style="--c:#3E5C3A"></i><span data-c="Forest green">Forest green</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.neutrals">Your neutrals</h4><ul class="chips"><li class="chip"><i style="--c:#5A3E2B"></i><span data-c="Chocolate">Chocolate</span></li><li class="chip"><i style="--c:#F0E4CC"></i><span data-c="Cream">Cream</span></li><li class="chip"><i style="--c:#8A7B57"></i><span data-c="Khaki">Khaki</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.hair">Hair shade examples</h4><ul class="chips"><li class="chip"><i style="--c:#4A3220"></i><span data-c="Golden brown">Golden brown</span></li><li class="chip"><i style="--c:#6B4A2B"></i><span data-c="Caramel brown">Caramel brown</span></li><li class="chip"><i style="--c:#6E3B22"></i><span data-c="Chestnut copper">Chestnut copper</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.lips">Lipsticks</h4><ul class="chips"><li class="chip"><i style="--c:#A6402E"></i><span data-c="Brick red">Brick red</span></li><li class="chip"><i style="--c:#C96F4A"></i><span data-c="Terracotta">Terracotta</span></li></ul></div>
+      </div>
+    </div>
+    <div class="panel" id="panel-winter" role="tabpanel" aria-labelledby="tab-winter">
+      <h3 class="panel-name" data-c="Winter type">Winter type</h3>
+      <p class="panel-sum" data-c="Cool and contrasting: your colouring carries clear, saturated colours and true black-and-white.">Cool and contrasting: your coloring carries clear, saturated colors and true black-and-white.</p>
+      <div class="groups">
+        <div class="group"><h4 data-i18n="exp.lift">Colors that lift you</h4><ul class="chips"><li class="chip"><i style="--c:#2B4C9B"></i><span data-c="Royal blue">Royal blue</span></li><li class="chip"><i style="--c:#0F7A5A"></i><span data-c="Emerald">Emerald</span></li><li class="chip"><i style="--c:#C2308F"></i><span data-c="Fuchsia">Fuchsia</span></li><li class="chip"><i style="--c:#C1122F"></i><span data-c="True red">True red</span></li><li class="chip"><i style="--c:#EBD1DC"></i><span data-c="Icy pink">Icy pink</span></li><li class="chip"><i style="--c:#4E2A70"></i><span data-c="Deep purple">Deep purple</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.neutrals">Your neutrals</h4><ul class="chips"><li class="chip"><i style="--c:#1C1C1E"></i><span data-c="Black">Black</span></li><li class="chip"><i style="--c:#FAFAFA"></i><span data-c="Pure white">Pure white</span></li><li class="chip"><i style="--c:#3C3C42"></i><span data-c="Charcoal">Charcoal</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.hair">Hair shade examples</h4><ul class="chips"><li class="chip"><i style="--c:#2C221E"></i><span data-c="Dark ash brown">Dark ash brown</span></li><li class="chip"><i style="--c:#3A1E1E"></i><span data-c="Dark mahogany brown">Dark mahogany brown</span></li><li class="chip"><i style="--c:#1C1412"></i><span data-c="Soft black">Soft black</span></li></ul></div>
+        <div class="group"><h4 data-i18n="exp.lips">Lipsticks</h4><ul class="chips"><li class="chip"><i style="--c:#C1122F"></i><span data-c="True red">True red</span></li><li class="chip"><i style="--c:#6E2B47"></i><span data-c="Deep berry">Deep berry</span></li></ul></div>
+      </div>
+    </div>
+    <p class="book-note" data-i18n="exp.note">In the app, hair shades are chosen within two levels of your natural depth. Seasonal color analysis is a styling framework, not a measurement: Hue&amp;You anchors it in your measured undertone, depth and contrast.</p>
+    <div class="book-cta">
+      <p data-i18n="exp.cta">Which season is yours? The app measures it from a single photo.</p>
+      <a class="store" href="https://apps.apple.com/app/id6802354065" data-i18n="hero.cta">Download on the App Store</a>
+    </div>
+  </div>
+</section>
+
+<section class="block reveal" id="inside">
+  <h2 class="title" data-i18n="gal.title">Inside the app</h2>
+  <div class="gallery" tabindex="0" data-i18n-aria="gal.title" aria-label="Inside the app" role="group">
+    <figure><img data-shot="home" src="img/shots/en-home.webp" width="370" height="800" loading="lazy" data-i18n-alt="gal.home" alt="Start with a photo"><figcaption data-i18n="gal.home">Start with a photo</figcaption></figure>
+    <figure><img data-shot="results" src="img/shots/en-results.webp" width="370" height="800" loading="lazy" data-i18n-alt="gal.results" alt="Measurements and hair shades"><figcaption data-i18n="gal.results">Measurements and hair shades</figcaption></figure>
+    <figure><img data-shot="type" src="img/shots/en-type.webp" width="370" height="800" loading="lazy" data-i18n-alt="gal.type" alt="Your color type"><figcaption data-i18n="gal.type">Your color type</figcaption></figure>
+    <figure><img data-shot="tryon" src="img/shots/en-tryon.webp" width="370" height="800" loading="lazy" data-i18n-alt="gal.tryon" alt="Try it on your photo"><figcaption data-i18n="gal.tryon">Try it on your photo</figcaption></figure>
+    <figure><img data-shot="makeup" src="img/shots/en-makeup.webp" width="370" height="800" loading="lazy" data-i18n-alt="gal.makeup" alt="Makeup"><figcaption data-i18n="gal.makeup">Makeup</figcaption></figure>
+    <figure><img data-shot="clothes" src="img/shots/en-clothes.webp" width="370" height="800" loading="lazy" data-i18n-alt="gal.clothes" alt="Clothing colors"><figcaption data-i18n="gal.clothes">Clothing colors</figcaption></figure>
+  </div>
+</section>
+
+<section class="block reveal" id="privacy">
+  <h2 class="title" data-i18n="priv.title">Private by design</h2>
+  <ul class="priv">
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.500"/><path d="M11 18.500h2"/></svg><h3 data-i18n="p1.t">On your device</h3><p data-i18n="p1.d">The analysis and the AI summary run directly on your iPhone or iPad.</p></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4.500 4.500 0 0 1-.6-9A6 6 0 0 1 18 9.500a4 4 0 0 1 0 8M4 4l16 16"/></svg><h3 data-i18n="p2.t">Nothing is uploaded</h3><p data-i18n="p2.d">Photos and face data never leave your device. Face data exists only in memory during the analysis.</p></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.800l7.500 3v5.700c0 4.500-3.100 8.200-7.500 9.700-4.400-1.500-7.500-5.200-7.500-9.700V5.800z"/><path d="M8.800 12l2.300 2.300 4.200-4.400"/></svg><h3 data-i18n="p3.t">No third-party AI</h3><p data-i18n="p3.d">No third-party AI service, no account and no tracking in the app.</p></li>
+  </ul>
+  <p class="priv-link"><a href="privacy.html#face-data" data-doc="face"><span data-i18n="priv.link">How face data is handled</span> <span aria-hidden="true">→</span></a></p>
+</section>
+
+<section class="block reveal" id="new">
+  <h2 class="title" data-i18n="new.title">What's new</h2>
+  <dl class="news">
+    <div><dt>2.5</dt><dd data-i18n="new.v25">Small improvements. After three successful try-ons, the app may kindly ask for a rating (at most once per version).</dd></div>
+    <div><dt>2.4</dt><dd data-i18n="new.v24">Now also in French, Italian, Portuguese (Brazil), Polish and Czech.</dd></div>
+  </dl>
+  <details class="older">
+    <summary data-i18n="new.older">Earlier versions</summary>
+    <dl class="news">
+      <div><dt>2.2</dt><dd data-i18n="new.v22">VoiceOver labels and Dynamic Type for better accessibility.</dd></div>
+      <div><dt>2.1</dt><dd data-i18n="new.v21">Now also in German, Spanish and Ukrainian.</dd></div>
+      <div><dt>2.0</dt><dd data-i18n="new.v20">iPhone and iPad, try a T-shirt or shirt right on your photo (even under hair), improved detection of eye and hair color, blur and backlight warnings, Siri Shortcuts.</dd></div>
+    </dl>
+  </details>
+</section>
+
+<section class="block closing reveal">
+  <div class="halo"><div class="inner"><img src="img/icon-192.png" width="96" height="96" alt=""></div></div>
+  <h2 class="title" data-i18n="end.title">Find the colors that are already yours.</h2>
+  <a class="store" href="https://apps.apple.com/app/id6802354065" data-i18n="hero.cta">Download on the App Store</a>
+  <p class="store-sub" data-i18n="hero.price">iPhone and iPad · €7.99 or local price, one time, no subscription</p>
+</section>
+
 </main>
+
+<footer class="sitefoot">
+  <nav>
+    <a href="support.html#support" data-doc="support" data-i18n="foot.support">Support</a>
+    <a href="privacy.html#privacy-policy" data-doc="privacy" data-i18n="foot.privacy">Privacy Policy</a>
+    <span><span data-i18n="foot.contact">Contact</span>: <a href="mailto:jansikuta@me.com">jansikuta@me.com</a></span>
+  </nav>
+  <p><span data-fz>©</span> 2026 Ján Šikuta · Hue&amp;You AI</p>
+</footer>
+
+<script src="app.js?v=20261107" defer></script>
 <script src="site.js" defer></script>
 </body>
 </html>
